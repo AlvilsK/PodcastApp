@@ -5,6 +5,11 @@ Rails.application.routes.draw do
   get 'episodes/show'
   get 'podcasts' => 'podcasts#index'
   get 'podcasts/show' => 'podcasts#show'
+  get 'dashboard' => 'podcasts#dashboard'
+  
+  # Remove when Devise is installed
+  get 'signin' => 'podcasts#signin'
+  get 'signup' => 'podcasts#signup'
 
 
   

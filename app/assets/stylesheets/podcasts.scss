@@ -134,8 +134,65 @@
             color: lighten($dark, 25%);
           }
         }
+        .authorised_links {
+          font-weight: 700;
+          font-size: .8rem;
+          a {
+            color: $highlight;
+            text-decoration: none;
+            margin-right: 1rem;
+            &:hover {
+              color: $highlight;
+            }
+          }
+        }
+      }
+    }
+  }
+  #episode_content {
+    padding: 4rem 0;
+    margin-bottom: 4rem;
+    border-bottom: 1px solid lighten($dark, 75%);
+    .current_episode_thumbnail {
+      display: block;
+      margin: 0 auto 2rem auto;
+      width: 10rem;
+      max-width: 100%;
+      border-radius: .35rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    .description {
+      text-align: center;
+      font-size: .9rem;
+      line-height: 1.7;
+      color: lighten($dark, 25%);
+    }
+  }
+  #links {
+    padding: 2rem 0;
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 1rem;
+      border-bottom: 1px solid lighten($dark, 75%);
+      li {
+        display: inline;
+        margin-right: 1rem;
+        font-weight: 700;
+        a {
+          color: $dark;
+          text-decoration: none;
+          &:hover {
+            color: $highlight;
+          }
+        }
+      }
+      .current {
+        color: $highlight;
       }
     }
   }
 }
-

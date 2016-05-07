@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
-  get 'episodes/show'
-
-  get 'podcasts' => 'podcasts#index'
-
-  get 'episode/show'
-
+  
   root 'welcome#index'
+  
+  get 'episodes/show'
+  get 'podcasts' => 'podcasts#index'
+  get 'podcasts/show' => 'podcasts#show'
+
+
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

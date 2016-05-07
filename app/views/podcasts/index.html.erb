@@ -1,17 +1,20 @@
-<div class="wrapper_wide">
-  <%= render 'shared/main_header' %>
-</div>
+<% provide(:title, "Podcasts") %>
 
+<!-- Header -->
+<%= render 'shared/main_header' %>
+
+<!-- Banner -->
 <div id="banner" class="podcasts_banner">
   <h1>Discover your new favorite podcast</h1>
 </div>
 
+<!-- Podcast previews -->
 <div id="podcasts" class="cf">
   <div class="wrapper">
     <ul>
       <a href="#">
         <li>
-          <img src="assets/samplepicture.jpg" alt="Sample Image"> 
+          <img src="/assets/samplepicture.jpg" alt="Sample Image"> 
           <div class="podcast_overview">
             <h2>Narwhals Podcast</h2>
             <p class="episode_count">1 Episode</p>
@@ -21,7 +24,7 @@
 
       <a href="#">
         <li>
-          <img src="assets/samplepicture.jpg" alt="Sample Image"> 
+          <img src="/assets/samplepicture.jpg" alt="Sample Image"> 
           <div class="podcast_overview">
             <h2>Narwhals Podcast</h2>
             <p class="episode_count">1 Episode</p>
@@ -31,7 +34,7 @@
 
       <a href="#">
         <li>
-          <img src="assets/samplepicture.jpg" alt="Sample Image"> 
+          <img src="/assets/samplepicture.jpg" alt="Sample Image"> 
           <div class="podcast_overview">
             <h2>Narwhals Podcast</h2>
             <p class="episode_count">1 Episode</p>
@@ -41,7 +44,7 @@
 
       <a href="#">
         <li>
-          <img src="assets/samplepicture.jpg" alt="Sample Image"> 
+          <img src="/assets/samplepicture.jpg" alt="Sample Image"> 
           <div class="podcast_overview">
             <h2>Narwhals Podcast</h2>
             <p class="episode_count">1 Episode</p>
@@ -51,7 +54,7 @@
 
       <a href="#">
         <li>
-          <img src="assets/samplepicture.jpg" alt="Sample Image"> 
+          <img src="/assets/samplepicture.jpg" alt="Sample Image"> 
           <div class="podcast_overview">
             <h2>Narwhals Podcast</h2>
             <p class="episode_count">1 Episode</p>
@@ -61,5 +64,7 @@
     </ul>
   </div>
 </div>
+<!-- /Podcasts previews -->
 
+<!-- Pagination -->
 <%= render 'shared/pagination'%>

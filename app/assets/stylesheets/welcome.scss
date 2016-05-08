@@ -4,7 +4,7 @@
 @import 'application'; // Imports variables etc. //
 
 #background {
-  background-image: url(/assets/homepage_background_main.jpg);
+  background-image: image-url("homepage_background_main.jpg");
   height: 100vh; // Enlarges depending on the sceen size - 100%/1vh = 1% //
   background-size: cover;
   background-position: center;

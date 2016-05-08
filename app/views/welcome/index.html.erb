@@ -1,10 +1,13 @@
 <div id="background">
-  <div class="wrapper_wide">
     <%= render 'shared/header' %>
     <div class="wrapper_wide">
-    	<h1>Discover your new favorite<br> podcast, or create your own.</h1>
-      <a href="#" class="button button_highlight">Create a Podcast</a>
-      <%= link_to "Explore", podcasts_path, class: "button button_white" %>
+      <% if !podcast_signed_in? %>
+      	<h1>Discover your new favorite<br> podcast, or create your own.</h1>
+      	<%= link_to "Create a Podcast", new_podcast_registration_path, class: "button button_highlight" %>
+        <%= link_to "Explore", podcasts_path, class: "button button_white" %>
+      <% else %>
+        <h1>Discover your new favorite<br> podcast, or create your own.</h1>
+        <%= link_to "Explore", podcasts_path, class: "button button_white" %>
+      <% end %>
     </div>
-  </div>
 </div>

@@ -3,9 +3,15 @@
 		<%= link_to 'PodcastApp', root_path, id: "logo" %>
 		<nav>
 			<ul>
+			<% if !podcast_signed_in? %>
+				<li><%= link_to "Create a Podcast" %></li>
 				<li><%= link_to "Explore", podcasts_path %></li>
-				<li><a href="#">Sign In</a></li>
-				<li><a href="#">Create a Podcast</a></li>
+				<li><%= link_to "Sign in", new_podcast_session_path %></li>
+			<% else %>
+				<li><%= link_to "Create a Podcast" %></li>
+				<li><%= link_to "Explore", podcasts_path %></li>
+				<li><%= link_to "Sign out", destroy_podcast_session_path, method: :delete %></li>
+			<% end %>
 			</ul>
 		</nav>
 	</header>

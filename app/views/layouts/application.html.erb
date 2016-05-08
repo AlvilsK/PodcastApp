@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="eng-US" >
   <head>
+    <meta charset="UTF-8">
     <title><%= full_title(yield(:title)) %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Upload your podcasts for free">
+    <meta name="keywords" content="Podcast Application">
+    <meta name="author" content="AlvilsK">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700italic' rel='stylesheet' type='text/css'>
+    <%= render 'shared/fonts'%>
     <%= render 'shared/shim' %>
   </head>
   <% if notice %> <p class="notice"><%= notice %></p><% end %>

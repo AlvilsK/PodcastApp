@@ -2,11 +2,10 @@ Rails.application.routes.draw do
   
   devise_for :podcasts
   root 'welcome#index'
-  
-  get 'episodes/show'
-  get 'podcasts' => 'podcasts#index'
  
-  resources :podcasts, only: [:index, :show]
+  resources :podcasts, only: [:index, :show] do
+    resources :episodes
+  end
 
 
   # The priority is based upon order of creation: first created -> highest priority.

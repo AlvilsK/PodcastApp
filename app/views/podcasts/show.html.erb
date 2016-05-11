@@ -21,73 +21,31 @@
     </div>
   </div>
   
+  <!-- Breadcrumb -->
   <div id="breadcrumb">
     <%= link_to podcasts_path do %>
       All Podcasts
       <span>/</span>
       The Rocketship Podcast
-    </a>
     <% end %>
-  </div>
-  
-  <div id="episode_content">
-    <div class="wrapper_skinny">
-      <img src="/assets/SteveJobs.jpg" alt="User Image" class="current_episode_thumbnail">
-      <h2>How to Pull Off 12 (Well Executed) Startups in 12 months</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae quam varius risus ultricies luctus in a tortor. Aenean dignissim lorem vel nulla eleifend, vel dignissim mauris laoreet. Aenean justo velit, sollicitudin quis pellentesque at, hendrerit sed sapien. Praesent tempor augue nisl, sit amet fermentum leo ultrices sed. Integer pharetra egestas mi id euismod. Vestibulum dignissim non eros sed cursus. Ut rhoncus cursus vehicula. Nullam faucibus orci et nisi varius auctor. Proin eleifend enim non volutpat auctor. Aliquam bibendum lobortis tortor, et tempus metus euismod vel. Aliquam eu vulputate sem.</p>
-    </div>
   </div>
   
   <div id="episodes">
     <div class="wrapper_skinny">
       <ul class="cf">
-        <li class="cf">
-          <div class="episode_thumbnail">
-            <a href="#">
-              <img src="/assets/SteveJobs.jpg" alt="User Image">
-            </a>
-          </div>
-          <div class="episode_overview">
-            <h2><a href="#">How to Pull Off 12 (Well Executed) Startups in 12 months</a></h2>
-            <p class="description">Aenean laoreet vitae magna nec sodales. Sed in efficitur libero. Sed auctor congue ligula...</p>
-          </div>
-        </li>
-        
-        <li class="cf">
-          <div class="episode_thumbnail">
-            <a href="#">
-              <img src="/assets/SteveJobs.jpg" alt="User Image">
-            </a>
-          </div>
-          <div class="episode_overview">
-            <h2><a href="#">How to Pull Off 12 (Well Executed) Startups in 12 months</a></h2>
-            <p class="description">Aenean laoreet vitae magna nec sodales. Sed in efficitur libero. Sed auctor congue ligula...</p>
-          </div>
-        </li>
-        
-        <li class="cf">
-          <div class="episode_thumbnail">
-            <a href="#">
-              <img src="/assets/SteveJobs.jpg" alt="User Image">
-            </a>
-          </div>
-          <div class="episode_overview">
-            <h2><a href="#">How to Pull Off 12 (Well Executed) Startups in 12 months</a></h2>
-            <p class="description">Aenean laoreet vitae magna nec sodales. Sed in efficitur libero. Sed auctor congue ligula...</p>
-          </div>
-        </li>
-        
-        <li class="cf">
-          <div class="episode_thumbnail">
-            <a href="#">
-              <img src="/assets/SteveJobs.jpg" alt="User Image">
-            </a>
-          </div>
-          <div class="episode_overview">
-            <h2><a href="#">How to Pull Off 12 (Well Executed) Startups in 12 months</a></h2>
-            <p class="description">Aenean laoreet vitae magna nec sodales. Sed in efficitur libero. Sed auctor congue ligula...</p>
-          </div>
-        </li>        
+        <% @episodes.each do |episode| %>
+          <li class="cf">
+            <div class="episode_thumbnail">
+              <a href="#">
+                <img src="/assets/SteveJobs.jpg" alt="User Image">
+              </a>
+            </div>
+            <div class="episode_overview">
+              <h2><%= link_to episode.title, podcast_episode_path(@podcast, episode) %></h2>
+              <p class="description"><%= truncate(episode.description, length: 160) %></p>
+            </div>
+          </li>
+        <% end %>  
       </ul>
     </div>
   </div>
